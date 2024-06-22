@@ -1,10 +1,19 @@
-- 👋 Hi, I’m @spatel7363
-- 😄 Pronouns: He/Him
-- ⚡ Fun fact: I built my first computer when I was 13!
-- 👀 I’m interested in #Information Security - Tech enthusiast - Eager to learn something new always - Let's connect and build something amazing together!
-- 🌱 I’m currently learning virtualization and cloud computing.
-- 💞️ I’m collaborate on capstone project.
-<!---
-spatel7363/spatel7363 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+Overview
+Elite Hair Studio is a modern hair salon website designed to provide users with information about our services, pricing, team, and contact details. The website features a dynamic and user-friendly interface built with HTML, CSS, JavaScript, and various libraries such as Bootstrap and Owl Carousel.
+
+Features
+Responsive Design: The website is fully responsive and works seamlessly on different devices.
+Service Section: Detailed information about the services provided, including pricing.
+About Us Section: Information about the salon's history and team experience.
+Contact Information: Contact details including address and phone number.
+
+Technologies Used
+HTML5, CSS3, JavaScript, Bootstrap, Font Awesome, Google Fonts
+
+Usage
+Navigation: Use the navigation bar to explore different sections of the website.
+Services: Check the services section for detailed information about available services and pricing.
+Contact: Use the contact information to reach out to us for appointments or inquiries.
+
+License
+This project is licensed under the MIT License. 
