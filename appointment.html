@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Appointment - FocusHealth</title>
+  <link rel="icon" type="image/x-icon" href="ico.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("iUfq0ZPYaZjkahnMt"); 
+    })();
+  </script>
+  <style>
+    .appointment-form {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+    }
+
+    .appointment-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .appointment-form label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .appointment-form input, 
+    .appointment-form textarea, 
+    .appointment-form select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .appointment-form button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .appointment-form button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <img class="logo" src="focushealth-logo.png" alt="FocusHealth Logo">
+      <div>Welcome to Your Health Website</div>
+      <div class="right">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+         
+          <li><a href="location.html">Location</a></li>
+
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="appointment.html">Appointment</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="appointment-section">
+      <form class="appointment-form" id="appointment-form">
+        <h2>Make an Appointment</h2>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="from_email" required>
+
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="from_name" required>
+
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="from_last_name" required>
+
+        <label for="diseases">Diseases:</label>
+        <input type="text" id="diseases" name="diseases" required>
+
+        <label for="details">Extra Details:</label>
+        <textarea id="details" name="details" rows="4"></textarea>
+
+        <label for="date">Preferred Date:</label>
+        <input type="date" id="date" name="preferred_date" required>
+
+        <label for="time">Preferred Time:</label>
+        <input type="time" id="time" name="preferred_time" required>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <small><i>Copyright &copy; 2020 Praharsh Patel Here</i></small>
+  </footer>
+
+  <script type="text/javascript">
+    document.getElementById('appointment-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const serviceID = 'service_6skgrvk'; 
+      const templateID = 'template_e3uldl2'; 
+
+      emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+          alert('Appointment request sent successfully!');
+          document.getElementById('appointment-form').reset();
+        }, (err) => {
+          alert('Failed to send appointment request.\r\n Error: ' + JSON.stringify(err));
+        });
+    });
+  </script>
+</body>
+
+</html>

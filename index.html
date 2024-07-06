@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>FocusHealth</title>
+  <link rel="icon" type="image/x-icon" href="ico.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <img class="logo" src="focushealth-logo.png" alt="FocusHealth Logo">
+      <div class="heading">Welcome to Focus Health</div>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+      <div class="right">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+         
+          <li><a href="location.html">Location</a></li>
+
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="appointment.html">Appointment</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="imgg"></div>
+    <section class="firstsection">
+      <div class="leftsection">
+        <ul>
+          <li>Welcome to Your Personal <span class="red">Doctor</span></li>
+          <li><span id="element"></span></li>
+        </ul>
+        <div class="dtls">
+          <button class="detailbutton" target="_blank" onclick="window.location.href='aboutus.html'">Get details</button>
+          <button class="appointmentbutton" onclick="window.location.href='appointment.html'">Get appointment</button>
+        </div>
+      </div>
+      <img src="f1.png" alt="Your Health Image" style="width: 344px; margin: 40px 0 0 0px;">
+    </section>
+    <section class="info-cards-section">
+        <div class="info-card">
+          <img src="./doctor.svg" alt="Our Doctors">
+          <h3>Our Doctors</h3>
+          <p>Search by name, specialty, location and more.</p>
+          <!-- <button class="info-button" onclick="window.location.href='doctors.html'">Find a doctor</button> -->
+        </div>
+        <div class="info-card">
+          <img src="/location.svg" alt="Locations & Directions">
+          <h3>Locations & Directions</h3>
+          <p>Find any of our 300+ locations.</p>
+          <button class="info-button" onclick="window.location.href='location.html'">Get directions</button>
+        </div>
+        <div class="info-card">
+          <img src="./calender.svg" alt="Appointments">
+          <h3>Appointments</h3>
+          <p>Get the in person or virtual care you need.</p>
+          <button class="info-button" onclick="window.location.href='appointment.html'">Schedule now</button>
+        </div>
+      </section>
+      
+
+    <!-- New Healing Section -->
+    <section class="healing-section">
+        <div class="healing-content">
+          <h2>Your Health, Our Priority</h2>
+          <p class="subheading"><strong>Comprehensive Care You Can Trust</strong></p>
+          <p>At FocusHealth, we are dedicated to providing personalized and effective treatment for all your health needs. Our experts are equipped to diagnose and treat a wide range of medical conditions with precision and care.</p>
+          <p class="subheading"><strong>Leading the Way in Healthcare Excellence</strong></p>
+          <p>FocusHealth is recognized for its outstanding medical services and patient care. We strive to maintain the highest standards in healthcare, ensuring you receive top-quality treatment and support. <a href="#">Learn more about our services and specialties.</a></p>
+        </div>
+        <div class="healing-image">
+          <img src="2.png" alt="Healing Image">
+        </div>
+      </section>
+      
+    <!-- End of Healing Section -->
+
+    <section class="about-section">
+      <h2>About FocusHealth</h2>
+      <p>FocusHealth is dedicated to providing you with the best healthcare services. Our mission is to ensure that you have access to top-notch medical advice, treatments, and facilities. Whether you are looking for the nearest hospital, a specialized health center, or a small clinic, we have got you covered.</p>
+      <p>Our platform also offers various health tips and blogs to keep you informed about the latest in healthcare. From diet and fitness to mental health and wellness, FocusHealth aims to be your go-to resource for all things health-related.</p>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script src="script.js"></script>
+
+  <footer>
+    <small><i>Copyright &copy; 2020 Raj Patel Here</i></small>
+  </footer>
+</body>
+
+</html>

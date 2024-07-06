@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <link rel="icon" type="image/x-icon" href="ico.png" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+     
+      .container {
+        max-width: 960px;
+        margin: 0 auto;
+      }
+
+      .about-section h1 {
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
+
+      .about-section p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
+
+      .team-section h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+
+      .team-member {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+
+      .team-member .member {
+        flex: 1 1 30%;
+        background: #f9f9f9;
+        margin: 10px;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .team-member .member img {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+      }
+
+      .team-member .member h3 {
+        margin-top: 15px;
+        font-size: 22px;
+      }
+
+      .team-member .member p {
+        font-size: 16px;
+        line-height: 1.4;
+      }
+
+      footer {
+        background-color: #f1f1f1;
+        padding: 20px;
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      @media (max-width: 768px) {
+        .team-member .member {
+          flex: 1 1 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img class="logo" src="focushealth-logo.png" alt="FocusHealth Logo" />
+        <div>Welcome to Your Health Website</div>
+        <div class="right">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="appointment.html">Appointment</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="about-section">
+        <div class="container">
+          <h1>About Us</h1>
+          <p>
+            At FocusHealth, our mission is to ensure everyone achieves their desired healthy life. We are driven by our core values of compassion, integrity, and excellence in healthcare.
+          </p>
+          <p>
+            Founded in 2023, we have a dedicated team of professionals who are passionate about improving people's health and their lifestyles. Our services span across multiple locations, providing accessible and comprehensive care to our community.
+          </p>
+          <p>
+            Our commitment to health and wellness extends beyond traditional healthcare services. We strive to educate and empower our patients, offering resources and support to help them make informed decisions about their health.
+          </p>
+        </div>
+      </section>
+
+      <section class="team-section">
+        <div class="container">
+          <h2>Meet Our Team</h2>
+          <div class="team-member">
+            <div class="member">
+              <!-- <img src="team1.jpg" alt="Team Member 1" /> -->
+              <h3> Raj Patel</h3>
+              <p>Developer</p>
+            </div>
+            
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 FocusHealth. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

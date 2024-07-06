@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Locations - FocusHealth</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <img class="logo" src="focushealth-logo.png" alt="FocusHealth Logo">
+            <div class="heading">FocusHealth Locations</div>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                   
+                    <li><a href="location.html">Location</a></li>
+          
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="appointment.html">Appointment</a></li>
+                  </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="location-main">
+        <div class="map-container" id="map"></div>
+        <div class="address-container">
+            <h2>Our Locations</h2>
+            <div class="address">
+                <h3>Main Hospital</h3>
+                <p>123 Health St.<br>City, State, ZIP</p>
+            </div>
+            <div class="address">
+                <h3>Health Center 1</h3>
+                <p>456 Wellness Ave.<br>City, State, ZIP</p>
+            </div>
+            <div class="address">
+                <h3>Health Center 2</h3>
+                <p>789 Care Blvd.<br>City, State, ZIP</p>
+            </div>
+            <!-- Add more locations as needed -->
+        </div>
+    </main>
+<script>
+    function initMap() {
+        var options = {
+            zoom: 10,
+            center: {lat: 40.7128, lng: -74.0060} // Example coordinates for New York City
+        };
+
+        var map = new google.maps.Map(document.getElementById('map'), options);
+
+        // Add marker for each location
+        var markers = [
+            {coords: {lat: 40.7128, lng: -74.0060}, content: '<h3>Main Hospital</h3><p>123 Health St.<br>City, State, ZIP</p>'},
+            {coords: {lat: 40.730610, lng: -73.935242}, content: '<h3>Health Center 1</h3><p>456 Wellness Ave.<br>City, State, ZIP</p>'},
+            {coords: {lat: 40.749933, lng: -73.98633}, content: '<h3>Health Center 2</h3><p>789 Care Blvd.<br>City, State, ZIP</p>'}
+        ];
+
+        for (var i = 0; i < markers.length; i++) {
+            addMarker(markers[i]);
+        }
+
+        function addMarker(props) {
+            var marker = new google.maps.Marker({
+                position: props.coords,
+                map: map
+            });
+
+            if (props.content) {
+                var infoWindow = new google.maps.InfoWindow({
+                    content: props.content
+                });
+
+                marker.addListener('click', function() {
+                    infoWindow.open(map, marker);
+                });
+            }
+        }
+    }
+</script>
+    <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?AIzaSyCKrzQfwSHY0enjLtLqt5HXIcNddSTMhIM&callback=initMap"
+    async defer></script>
+</body>
+</html>
