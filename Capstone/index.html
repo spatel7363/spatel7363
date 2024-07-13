@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="D:\Capstone\css\res.css">
-    <script defer src="D:\Capstone\js\script.js"></script>
+    <link rel="stylesheet" href="css/res.css">
+    <script defer src="js/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Home - Eggholic</title>
 </head>
 <body>
     <header>
@@ -12,54 +14,79 @@
             <h1 class="logo">Eggholic</h1>
             <nav>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-
+    <div id="imageSlider" class="slider-container">
+        <div class="slide active">
+            <img src="images/image1.jpg" alt="Slide 1">
+        </div>
+        <div class="slide">
+            <img src="images/image2.jpg" alt="Slide 2">
+        </div>
+        <div class="slide">
+            <img src="images/image3.jpg" alt="Slide 3">
+        </div>
+        <a class="prev" id="imageprevious" onclick="moveImageSlide(-1)">&#10094;</a>
+        <a class="next" id="imagenext" onclick="moveImageSlide(1)">&#10095;</a>
+    </div>
     <section id="home">
-        <div class="container">
-            <h2>Welcome to Our Restaurant</h2>
-            <p>Enjoy delicious meals in a cozy atmosphere.</p>
-            <button id="learnMore">Learn More</button>
+        <div class="container" id="welcome">
+            <h2 id="food">LOVE FOR FOOD!</h2>
+            <p id="msg">Welcome to our home away from home. You know that feeling when you enjoy something so much and you want to share it with those around you. That’s how we feel about our food. Growing up in India, there were so many food options. But our favorite was Egg Night. Read More</p>
         </div>
     </section>
 
-    <section id="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>We are a family-owned restaurant offering a variety of dishes made from fresh ingredients.</p>
+    <div id="menuSlider" class="slider-container" >
+        <!-- Slider for each menu item -->
+        <div class="menu-slide active" >
+            <img src="images/amdavadi touch.jpg" alt="Amdavadi Touch">
+            <p>Amdavadi Touch</p>
+        </div>
+        <div class="menu-slide">
+            <img src="images/surati-gotalo-home.jpg" alt="Surti Gotalo">
+            <p>Surti Gotalo</p>
+        </div>
+        <div class="menu-slide">
+            <img src="images/samosa-chaat.jpg" alt="Samosa Chaat">
+            <p>Samosa Chaat</p>
+        </div>
+        <div class="menu-slide">
+            <img src="images/cheese-katori.jpg" alt="Cheese Katori">
+            <p>Cheese Katori</p>
+        </div>
+        <a class="prev" id="previous" onclick="moveMenuSlide(-1)">&#10094;</a>
+        <a class="next" id="nextone" onclick="moveMenuSlide(1)">&#10095;</a>
+    </div>
+    
+
+    <section id="opening-hours">
+        <div class="container" id="timing"> 
+            <h2 id="hours">Opening Hours</h2>
+            <p id="days">Monday - Friday: 9 AM to 11 PM</p>
+            <p id="dy">Saturday - Sunday: 8 AM to 12 AM</p>
         </div>
     </section>
 
-    <section id="menu">
-        <div class="container">
-            <h2>Our Menu</h2>
-            <ul>
-                <li>Pasta Primavera</li>
-                <li>Grilled Chicken Salad</li>
-                <li>Margherita Pizza</li>
-                <li>Chocolate Lava Cake</li>
+    <section id="locations">
+        <div class="container" id="location">
+            <h2 id="location-heading">Our Branches</h2>
+            <ul id="address">
+                <li><i class="fas fa-map-marker-alt" id="add"></i>31 University Ave E, Waterloo, ON N2J 2V9</li>
+                <li><i class="fas fa-map-marker-alt" id="add"></i>50 King St S, Waterloo, ON N2J 1P6</li>
+                <li><i class="fas fa-map-marker-alt" id="add"></i>77 Cedar Pointe Dr, Barrie, ON L4N 5R7</li>
             </ul>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>Address: 31 University Ave E, Waterloo, ON N2J 2V9</p>
-            <p>Phone: (123) 456-7890</p>
-            <p>Email: info@restaurant.com</p>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Restaurant Name. All rights reserved.</p>
+            <p>&copy; 2024 Eggholic. All rights reserved.</p>
         </div>
     </footer>
 </body>

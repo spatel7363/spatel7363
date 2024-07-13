@@ -1,109 +1,308 @@
-@font-face {
-    font-family: 'CustomFont';
-    src: url('../fonts/custom-font.woff') format('woff');
-}
-
+/* Reset and base styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
-    font-family: 'CustomFont', Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    color: #333;
+    background-color: #fff;
+    padding: 20px;
 }
 
+/* Container styling */
 .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
+    width: 90%;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    /* padding: 20px; */
 }
 
+/* Header and Navigation Styles */
 header {
-    background: #333;
+    background: #093455; /* Vibrant orange background */
     color: #fff;
-    padding-top: 30px;
-    min-height: 70px;
-    border-bottom: #77a0a9 3px solid;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -29px;
+}
+nav ul li {
+    margin-left: 20px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-header a {
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
+/* Section styling */
+section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+section h2 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+section p, section ul {
     font-size: 16px;
 }
-
-header ul {
-    padding: 0;
-    list-style: none;
+section ul {
+    list-style-type: none;
+    margin-left: 20px;
 }
 
-header li {
-    display: inline;
-    padding: 0 20px 0 20px;
+/* Button styling */
+button {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #e03c00;
 }
 
-header .logo {
-    float: left;
-    font-size: 24px;
-}
-
-header nav {
-    float: right;
-    margin-top: 10px;
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-section {
-    padding: 20px 0;
-    margin-bottom: 20px;
-}
-
-section#home {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 100px 0;
-}
-
-section#about, section#menu, section#contact {
-    background: #fff;
-    color: #333;
-}
-
-section h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
+/* Footer styling */
 footer {
-    background: #333;
-    color: #fff;
+    background-color: #333;
+    color: white;
     text-align: center;
     padding: 10px 0;
 }
-
 footer p {
     margin: 0;
 }
 
-button {
-    background-color: #77a0a9;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    /* max-width: 1200px; Maximum width of the slider */
+    margin: auto;
+    overflow: hidden;
+    height: 400px;
 }
 
-button:hover {
-    background-color: #5b8389;
+.slide {
+    display: none;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.slide.active {
+    display: block;
+}
+
+img {
+    width: 100%;
+    height: 520px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    z-index: 999;
+}
+
+
+#imageprevious {
+    left: 0;
+    background: none;
+}
+
+#imagenext {
+    right: 0;
+    background: none;
+}
+
+#home
+{
+    color: white;
+    background-color: #093455;
+    
+}
+#food
+{
+    color: white;
+    margin-left: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 50;
+    font-size: 56px;
+
+}
+
+#welcome
+{
+    border: 1px solid white;
+    width: 100%;
+
+}
+
+#msg
+{
+    margin-left: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
+}
+
+#opening-hours
+{
+    color: white;
+    background-color: #093455;
+}
+
+#hours
+{
+    color: white;
+    margin-left: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* margin-bottom: 20px; */
+}
+
+#timing
+{
+    border: 1px solid white;
+    width: 100%;
+}
+
+#days
+{
+    margin-left: 20px;
+}
+
+#dy
+{
+    margin-left: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
+}
+
+
+
+
+/* menu slider */
+
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: mintcream; 
+}
+
+.menu-slide {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-slide.active {
+    display: flex;
+}
+
+.menu-slide img {
+    width: 240px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.menu-slide p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    color: black;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 15px;
+    user-select: none;
+}
+
+#previous {
+    left: 10px;
+    background: none;
+}
+
+#nextone {
+    right: 10px;
+    background: none;
+}
+
+/* location */
+
+#locations
+{
+    background-color: #093455;
+    color: white;
+
+}
+
+#location-heading
+{
+    color: white;
+    margin-left: 20px;
+
+}
+
+#location
+
+{
+    border: 1px solid white;
+    width: 100%;
+}
+
+#address
+{
+    margin-left: 25px;
+}
+
+#add
+{
+    margin-right: 10px;
 }
