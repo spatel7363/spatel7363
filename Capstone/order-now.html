@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Order Now - Eggholic</title>
+</head>
+<body>
+    <header class="bg-dark py-3">
+        <div class="container">
+            <h1 class="text-white">Eggholic</h1>
+        </div>
+    </header>
+
+    <div class="container mt-5">
+        <h2>My Cart</h2>
+        <ul id="cartItems" class="list-group mb-3"></ul>
+        <p>Total: $<span id="cartTotal">0.00</span></p>
+        <button class="btn btn-success" onclick="checkout()">Checkout</button>
+        <button class="btn btn-danger" onclick="clearCart()">Clear Cart</button>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+        <div class="container">
+            <p>&copy; 2024 Eggholic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/order-now.js"></script>
+    <script>
+        function checkout() {
+            window.location.href = 'checkout.html';
+        }
+    </script>
+</body>
+</html>

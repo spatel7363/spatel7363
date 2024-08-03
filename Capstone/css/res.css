@@ -12,17 +12,10 @@ body {
     padding: 20px;
 }
 
-/* Container styling */
-.container {
-    width: 90%;
-    /* max-width: 1200px; */
-    margin: 0 auto;
-    /* padding: 20px; */
-}
 
 /* Header and Navigation Styles */
 header {
-    background: #093455; /* Vibrant orange background */
+    background: #093455; 
     color: #fff;
     padding: 20px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -305,4 +298,77 @@ img {
 #add
 {
     margin-right: 10px;
+}
+
+
+
+
+/* about us  */
+
+#contact
+{
+    width: 100%;
+    margin-top: 15px;
+}
+
+#aboutus
+{
+    padding: 20px;
+}
+
+
+/* order-now */
+
+/* Optional: Custom styles for the menu and cart */
+.card {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    height: 200px; /* Fix height for uniformity */
+    object-fit: cover; /* Ensure images cover the area well */
+}
+
+.sticky-top {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/* menu  */
+
+body {
+    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.card {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card img {
+    height: 150px;  /* Adjust based on your design */
+    object-fit: cover;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-primary {
+    margin-top: auto;  /* Pushes the button to the bottom of the card */
+}
+
+/* logo */
+.logo
+{
+   color: white;
 }
